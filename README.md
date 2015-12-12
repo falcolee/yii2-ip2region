@@ -43,11 +43,14 @@ Inspired by yii2-IP2Location and ip2region.
 中文说明
 ========
 准确率99.9%的ip到地名的映射库，0.0x毫秒级查询，数据库文件大小只有3.5M http://git.oschina.net/lionsoul/ip2region
+提供SEARCH_BTREE(默认)和SEARCH_BINARY两种查询模式
 
 安装
 ====
+
 * 解压文件到 `common/components`
 * 在 `main.php` 添加如下信息:
+
     	'components' => array(
     		...
     		'ip2region' => array(
@@ -57,6 +60,7 @@ Inspired by yii2-IP2Location and ip2region.
     		),
     		...
     	),
+
 
 感谢
 ====
