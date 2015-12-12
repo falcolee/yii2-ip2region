@@ -1,7 +1,7 @@
 # yii2-ip2region
 ip2region extension for yii2
 
-Help you to retrieve chinese geolocation information in 0.0x ms
+Help you to retrieve Chinese geolocation information in 0.0x ms
 
  *This extenestion provides two search modes, SEARCH_BTREE(the default mode) and SEARCH_BINARY.
  *It contains a very small database file,only 3.5M
@@ -41,7 +41,7 @@ Inspired by yii2-IP2Location and ip2region.
 
 
 中文说明
-
+========
 准确率99.9%的ip到地名的映射库，0.0x毫秒级查询，数据库文件大小只有3.5M http://git.oschina.net/lionsoul/ip2region
 
 安装
