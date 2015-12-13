@@ -14,10 +14,5 @@
     "require": {
         "yiisoft/yii2": "*"
     },
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "xiaogouxo\\ip2region\\": ""
-        }
-    }
+    "minimum-stability": "dev"
 }
