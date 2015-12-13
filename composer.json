@@ -1,5 +1,5 @@
 {
-    "name": "xiaogouxo/yii2-IP2Region",
+    "name": "xiaogouxo/yii2-ip2region",
     "type": "library",
     "description": "ip2region extension for yii2 to retrieve Chinese geolocation information",
     "keywords": ["yii","ip","region"],
@@ -17,7 +17,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "xiaogouxo\\IP2Region\\": ""
+            "xiaogouxo\\ip2region\\": ""
         }
     }
 }

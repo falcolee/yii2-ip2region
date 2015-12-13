@@ -1,5 +1,5 @@
 <?php
-namespace xiaogouxo\IP2Region;
+namespace xiaogouxo\ip2region;
 
 use Yii;
 use \yii\base\Exception;
