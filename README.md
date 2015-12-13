@@ -6,18 +6,32 @@ Help you to retrieve Chinese geolocation information in 0.0x ms
  *This extenestion provides two search modes, SEARCH_BTREE(the default mode) and SEARCH_BINARY.
  *It contains a very small database file,only 3.5M
 
-Installation
+## Installation
+
+To install, either run
+
+```
+$ php composer.phar require xiaogouxo/yii2-ip2region "*"
+```
+
+or add
+
+```
+"xiaogouxo/yii2-ip2region": "*"
+```
+
+to the ```require``` section of your `composer.json` file.
+
 ============
-* Extract this package to `common/components`
 * Add following lines into `main.php` configuration file:
 
     	'components' => array(
     		...
-    		'ip2region' => array(
-    			'class' => '\common\components\IP2Region\Geolocation',
-	            'database' => __DIR__ .DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'IP2Region'.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'ip2region.db',
+	        'ip2region' => [
+	            'class' => '\xiaogouxo\ip2region\Geolocation',
+	            'database' => dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'xiaogouxo'.DIRECTORY_SEPARATOR.'yii2-ip2region'.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'ip2region.db',
 	            'mode' => 'SEARCH_BTREE',
-    		),
+	        ]
     		...
     	),
 
@@ -48,16 +62,15 @@ Inspired by yii2-IP2Location and ip2region.
 安装
 ====
 
-* 解压文件到 `common/components`
 * 在 `main.php` 添加如下信息:
 
     	'components' => array(
     		...
-    		'ip2region' => array(
-    			'class' => '\common\components\IP2Region\Geolocation',
-	            'database' => __DIR__ .DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'IP2Region'.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'ip2region.db',
+	        'ip2region' => [
+	            'class' => '\xiaogouxo\ip2region\Geolocation',
+	            'database' => dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'xiaogouxo'.DIRECTORY_SEPARATOR.'yii2-ip2region'.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'ip2region.db',
 	            'mode' => 'SEARCH_BTREE',
-    		),
+	        ]
     		...
     	),
 
