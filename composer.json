@@ -1,0 +1,23 @@
+{
+    "name": "xiaogouxo/yii2-IP2Region",
+    "type": "library",
+    "description": "ip2region extension for yii2 to retrieve Chinese geolocation information",
+    "keywords": ["yii","ip","region"],
+    "homepage": "https://github.com/xiaogouxo/yii2-ip2region",
+    "license": "BSD-3",
+    "authors": [
+        {
+            "name": "Falco Lee",
+            "email": "5493972@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "xiaogouxo\\IP2Region\\": ""
+        }
+    }
+}

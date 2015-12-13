@@ -1,10 +1,10 @@
 <?php
-namespace common\components\IP2Region;
+namespace xiaogouxo\IP2Region;
 
 use Yii;
 use yii\base\Component;
 use \yii\base\Exception;
-use \common\components\IP2Region\IP2Region;
+use \xiaogouxo\IP2Region\IP2Region;
 
 class Geolocation extends Component {
 	public $database = './data/ip2region.db';
