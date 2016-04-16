@@ -7,7 +7,7 @@ use \yii\base\Exception;
 use \xiaogouxo\ip2region\IP2Region;
 
 class Geolocation extends Component {
-	public $database = './data/ip2region.db';
+	public $database = null;
 	public $mode;
 
 	protected static $ip2region;
@@ -25,6 +25,10 @@ class Geolocation extends Component {
 			default:
                 $this->mode = IP2Region::SEARCH_BTREE;
 			break;
+		}
+
+		if(!$this->database){
+			$this->database = dirname(__FILE__).DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'ip2region.db';
 		}
 
 		self::$ip2region = new IP2Region($this->database);
